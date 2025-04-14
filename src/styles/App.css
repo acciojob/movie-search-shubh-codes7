@@ -1,1 +1,23 @@
 
+*{
+    background-color: rgb(40, 40, 40);
+    color: white;
+}
+
+.card{
+    border: 1px solid white;
+    padding: 8px;
+    position: relative;
+}
+
+#display{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+.movieName{
+    width: 300px;
+}
