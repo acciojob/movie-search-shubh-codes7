@@ -27,13 +27,15 @@ const Movie = () => {
   return (
     <>
       <h2>Search Movie</h2>
-      <input type="text" placeholder="Iron Man" />
-      <button onClick={handleSubmit}>Search</button>
+      <form>
+        <input type="text" placeholder="Iron Man" />
+        <button onClick={handleSubmit}>Search</button>
+      </form>
       <div id="display">
         {flag ? (
-          movies.map((mov) => <Card key={mov.imdbID} mov={mov} />)
+          movies.map((mov) => <li><Card key={mov.imdbID} mov={mov} /></li>)
         ) : (
-          <p>Invalid movie name. Please try again</p>
+          <p className = "error">Invalid movie name. Please try again</p>
         )}
       </div>
     </>
