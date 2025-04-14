@@ -3,7 +3,7 @@ import React from 'react'
 const Card = ({mov}) => {
     return(
         <div className="card" >
-            <p className="movieName">{mov.Title} ({mov.Year})</p>
+            <li className="movieName">{mov.Title} ({mov.Year})</li>
             <img src={mov.Poster}/>
         </div>
 

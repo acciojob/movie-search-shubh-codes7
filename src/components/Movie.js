@@ -32,12 +32,9 @@ const Movie = () => {
         <button onClick={handleSubmit}>Search</button>
       </form>
       <div id="display">
-        {flag ? (
-          movies.map((mov) => <li><Card key={mov.imdbID} mov={mov} /></li>)
-        ) : (
-          <p className = "error">Invalid movie name. Please try again</p>
-        )}
+        {flag && movies.map((mov) => <Card key={mov.imdbID} mov={mov} />)}
       </div>
+      {!flag && <p className="error">Invalid movie name. Please try again</p>}
     </>
   );
 };
